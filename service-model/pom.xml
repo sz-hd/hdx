@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.tws.record</groupId>
-    <artifactId>bl</artifactId>
+    <groupId>com.hdx</groupId>
+    <artifactId>prod</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>service-model</artifactId>
@@ -174,12 +174,12 @@
 		<repository>
 			<id>my-nexus-releases</id>
 			<name>nexus_repo-releases</name>
-			<url>http://192.168.5.8/nexus/content/repositories/releases/</url>
+			<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 			<id>my-nexus-snapshot</id>
 			<name>nexus_repo-snapshots</name>
-			<url>http://192.168.5.8/nexus/content/repositories/snapshots/</url>
+			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
   </distributionManagement>
     
