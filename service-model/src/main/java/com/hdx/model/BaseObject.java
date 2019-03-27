@@ -14,9 +14,6 @@ public abstract class BaseObject implements Serializable, Cloneable {
 				ToStringStyle.MULTI_LINE_STYLE);
 	}
 	
-	
-	
-	
 	public boolean equals(Object o) {
 		return EqualsBuilder.reflectionEquals(this, o);
 	}
