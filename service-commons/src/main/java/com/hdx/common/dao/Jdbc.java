@@ -251,7 +251,7 @@ public abstract class Jdbc extends JdbcDaoSupport {
 
 	protected long queryForLong(String sql) {
 		try {
-			long result = this.getJdbcTemplate().queryForLong(sql);
+			long result = this.getJdbcTemplate().queryForObject(sql, new Object[] {},Long.class);
 			if (log.isDebugEnabled()) {
 				log.debug("result:" + result + " sql:" + sql);
 			}
@@ -263,9 +263,9 @@ public abstract class Jdbc extends JdbcDaoSupport {
 
 	protected long queryForLong(String sql, StatementParameter param) {
 		Object[] args = param.getArgs();
-		int[] argTypes = param.getArgTypes();
+		//int[] argTypes = param.getArgTypes();
 		try {
-			long result = this.getJdbcTemplate().queryForLong(sql, args, argTypes);
+			long result = this.getJdbcTemplate().queryForObject(sql, args,Long.class);
 			if (log.isDebugEnabled()) {
 				log.debug("result:" + result + " sql:" + this.getSQL(sql, param));
 			}
@@ -277,7 +277,7 @@ public abstract class Jdbc extends JdbcDaoSupport {
 
 	public int queryForInt(String sql) {
 		try {
-			int result = this.getJdbcTemplate().queryForInt(sql);
+			int result = this.getJdbcTemplate().queryForObject(sql,new Object[] {},Integer.class);
 			if (log.isDebugEnabled()) {
 				log.debug("result:" + result + " sql:" + sql);
 			}
@@ -289,9 +289,9 @@ public abstract class Jdbc extends JdbcDaoSupport {
 
 	public int queryForInt(String sql, StatementParameter param) {
 		Object[] args = param.getArgs();
-		int[] argTypes = param.getArgTypes();
+		//int[] argTypes = param.getArgTypes();
 		try {
-			int result = this.getJdbcTemplate().queryForInt(sql, args, argTypes);
+			int result = this.getJdbcTemplate().queryForObject(sql, args, Integer.class);
 			if (log.isDebugEnabled()) {
 				log.debug("result:" + result + " sql:" + this.getSQL(sql, param));
 			}
